@@ -19,3 +19,7 @@ const char* getYellowColor() {
 const char* getGreenColor() {
     return "green";
 }
+
+const char* getBlackColor() {
+    return "black";
+}

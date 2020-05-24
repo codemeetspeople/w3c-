@@ -9,5 +9,6 @@ TEST_CASE( "test Color", "[Color]" ) {
         REQUIRE(getMagentaColor() == "magenta");
         REQUIRE(getYellowColor() == "yellow");
         REQUIRE(getGreenColor() == "green");
+        REQUIRE(getBlackColor() == "black");
     }
 }
