@@ -1,31 +1,55 @@
 #include <iostream>
+#include <cmath>
 
 struct Point {
-    int x;
-    int y;
+    private:
+        int x;
+        int y;
 
-    int getX() {
-        return this->x;
-    }
+    public:
+        Point(int x, int y) {
+            this->x = x;
+            this->y = y;
+        }
 
-    bool operator==(const Point& other) {
-        return this->x == other.x && this->y == other.y;
-    }
+        int getX() const {
+            return this->x;
+        }
 
-    bool operator!=(const Point& other) {
-        return !((*this) == other);
-    }
+        int getY() const {
+            return this->y;
+        }
+
+        void setX(int x) {
+            this->x = x;
+        }
+
+        void setY(int y) {
+            this->y = y;
+        }
+
+        bool operator==(const Point& other) const {
+            return this->x == other.x && this->y == other.y;
+        }
+
+        bool operator!=(const Point& other) const {
+            return !((*this) == other);
+        }
+
+        double distance(const Point& other) const {
+            return hypot(this->x - other.x, this->y - other.y);
+        }
 };
 
 
 std::ostream& operator<<(std::ostream& out, const Point& p) {
-    out << "(" << p.x << ", " << p.y << ")";
+    out << "(" << p.getX() << ", " << p.getY() << ")";
     return out;
 }
 
 int main() {
-    Point a = {10, 9};
-    Point b = {10, 9};
+    Point a = Point(10, 9);
+    Point b = Point(11, 8);
 
 
     if ( a == b ) {
@@ -33,6 +57,8 @@ int main() {
     } else {
         std::cout << a << " != " << b << std::endl;
     }
+
+    std::cout << a.distance(b) << std::endl;
 
 
     return 0;
