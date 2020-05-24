@@ -1,4 +1,4 @@
-#include "../color/Color.h"
+#include "Color.h"
 #include "catch.hpp"
 
 
