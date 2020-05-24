@@ -86,11 +86,9 @@ void printPoint(Point p) {
 }
 
 int main() {
-    Point a = Point(10, 9);
+    Point a = Point(10, 12);
     Point b = Point(11, 8);
     Point c;
-
-    c.setY(20000000000);
 
     try {
         c.setX(-50);
@@ -110,7 +108,7 @@ int main() {
         std::cout << a << " != " << b << std::endl;
     }
 
-    std::cout << a.distance(b) << std::endl;
+    std::cout << a.distance(c) << std::endl;
 
     delete d;
 
