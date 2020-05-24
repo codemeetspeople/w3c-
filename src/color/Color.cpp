@@ -16,10 +16,6 @@ const char* getYellowColor() {
     return "yellow";
 }
 
-const char* getLightGreenColor() {
+const char* getGreenColor() {
     return "green";
-}
-
-const char* getBlackColor() {
-    return "black";
 }

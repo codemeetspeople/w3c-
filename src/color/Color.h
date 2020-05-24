@@ -7,8 +7,7 @@ const char* getRedColor();
 const char* getBlueColor();
 const char* getMagentaColor();
 const char* getYellowColor();
-const char* getLightGreenColor();
-const char* getBlackColor();
+const char* getGreenColor();
 
 
 #endif // COLOR_H
